@@ -1,1 +1,1 @@
-# blog_dise-o_social
+# blog_diseño_social

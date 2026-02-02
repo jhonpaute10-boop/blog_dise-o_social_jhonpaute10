@@ -1,0 +1,848 @@
+/* FUENTES */
+@font-face {
+  font-family: "Ciguatera";
+  src: url("assets/fonts/ciguatera.otf");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("assets/fonts/Roboto-Regular.ttf");
+}
+
+:root {
+  --cream: #fcf6ea;
+  --teal-dark: #0b798e; /* El color oscuro de los titulos */
+  --teal-light: #4a8c91;
+  --yellow: #1c8146;
+  --text: #203b44;
+  --font-h: "Ciguatera", serif;
+  --font-b: "Roboto", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: var(--cream);
+  font-family: var(--font-b);
+  color: var(--text);
+  overflow-x: hidden;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* HEADER */
+.top-header {
+  position: absolute;
+  top: 30px;
+  left: 100px;
+  z-index: 100;
+}
+.uni-text {
+  font-family: var(--font-h);
+  color: #203b44;
+  letter-spacing: 1px;
+}
+
+.career-text {
+  color: #203b44;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero-bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+.hero-content {
+  z-index: 2;
+  margin-top: -50px;
+}
+.title-main {
+  font-family: var(--font-h);
+  font-size: 7rem;
+  color: #fff;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+  line-height: 0.9;
+  font-weight: normal;
+}
+.title-sub {
+  font-size: 2rem;
+  color: #fff;
+  font-style: italic;
+  margin-top: 10px;
+  font-weight: normal;
+}
+.arrow-down {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-top: 70px;
+  animation: bounce 2s infinite;
+}
+.paco-hero {
+  position: absolute;
+  bottom: 40px;
+  right: 5%;
+  width: 320px;
+  z-index: 5;
+}
+.wave-bottom {
+  position: absolute;
+  bottom: -20px;
+  width: 100%;
+}
+
+/* --- CONTEXTO --- */
+.contexto {
+  padding: 20px 0;
+  position: relative;
+}
+/* El contenedor principal que divide izquierda/derecha */
+.split {
+  display: flex;
+  align-items: center; /* Centra verticalmente texto e imagen */
+  justify-content: space-between; /* Separa los elementos */
+  gap: 60px; /* Espacio entre el texto y la imagen */
+}
+.sec-title {
+  font-family: var(--font-h);
+  font-weight: normal;
+  color: var(--teal-dark);
+  font-size: 3.5rem;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+.txt-col p {
+  margin-bottom: 15px;
+  text-align: justify;
+  font-size: 1.1rem;
+}
+.img-col img {
+  width: 166%;
+  max-width: auto;
+}
+.onda-hero {
+  position: absolute;
+  top: 30px;
+  left: -3px;
+  width: 72px;
+}
+/* Los 3 iconos abajo */
+.icons-3-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 120px; /* Más espacio entre iconos */
+  margin-top: 30px;
+  flex-wrap: wrap; /* Para que no se rompa en pantallas pequeñas */
+}
+
+.icon-box {
+  text-align: center;
+  width: 250px; /* Asegura que cada icono tenga su espacio */
+}
+
+.icon-box img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.wave-sep {
+  position: relative;
+  display: block;
+  width: 140%;
+  right: 37%;
+  margin: -10px 0 0; /* separa del bloque split */
+}
+
+/* INVESTIGACION */
+.investigacion {
+  padding: 60px 0 80px;
+}
+.center {
+  text-align: center;
+}
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 60px auto;
+  position: relative;
+}
+
+/* ===== INVESTIGACIÓN (nuevo diseño) ===== */
+
+.investigacion {
+  padding: 30px;
+}
+
+/* --- Strip de fotos --- */
+.research-strip {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px 0;
+  margin: 60px 0 30px;
+}
+
+.research-path {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 35px;
+  width: 100%;
+  height: 180px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.research-photos {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 54px 20px;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.research-photo {
+  width: 240px; /* o el tamaño que te guste */
+  height: auto; /* clave: no recorta */
+  object-fit: contain; /* clave: no recorta */
+  border: none; /* quita marco extra */
+  box-shadow: none; /* quita sombra extra */
+  border-radius: 0; /* evita doble esquina redondeada */
+  background: transparent;
+  transform: none; /* importante si tus imágenes YA vienen inclinadas */
+}
+
+/* “desorden” tipo mockup (rotación leve) */
+.research-photo:nth-child(1) {
+  transform: rotate(-6deg);
+}
+.research-photo:nth-child(2) {
+  transform: rotate(4deg);
+}
+.research-photo:nth-child(3) {
+  transform: rotate(-4deg);
+}
+.research-photo:nth-child(4) {
+  transform: rotate(9deg);
+}
+
+/* ===== IDEA FINAL (mapa mental) ===== */
+/* TABS MINDMAP */
+.mindmap {
+  padding: 30px 0;
+}
+
+.mindmap-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin: 20px 0 35px;
+}
+
+.mind-tab {
+  border: none;
+  padding: 14px 150px;
+  border-radius: 999px;
+  background: #8fbfc1;
+  color: #203b44;
+  font-family: var(--font-h);
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* === Tabs: 3 colores (oscuro / medio / claro) === */
+.mindmap-tabs .mind-tab:nth-child(1) {
+  background: #86c3c6;
+  color: #203b44;
+}
+
+.mindmap-tabs .mind-tab:nth-child(2) {
+  background: #0b798e;
+  color: #ffffff;
+}
+
+.mindmap-tabs .mind-tab:nth-child(3) {
+  background: #31a6bd;
+  color: #fcf6ea;
+}
+
+/* ===============================
+   FONDO ORGÁNICO
+   =============================== */
+
+.fondoorganico {
+  position: relative; /* referencia */
+  width: 100%;
+  padding: 140px 0; /* aire arriba y abajo */
+  overflow: hidden;
+  background: #fcf6ea; /* color respaldo */
+  margin-bottom: 50px;
+}
+
+/* FONDO */
+
+.fondoorganico-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.fondoorganico-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+/* CONTENIDO */
+.fondoorganico-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* FILAS */
+.mm-row {
+  display: grid;
+  grid-template-columns: 2fr 2.5fr 2fr;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 58px;
+}
+
+/* COLUMNAS */
+.mm-left {
+  max-width: 200px; /* 👈 AJUSTA este valor */
+  color: #ffffff;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.2;
+  white-space: normal;
+}
+
+.mm-center {
+  background: rgba(255, 255, 255, 0);
+  color: #ffffff;
+  padding: 24px 28px;
+  border-radius: 14px;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.mm-right {
+  font-size: 0.95rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* ===============================
+   POSICIONAMIENTO MANUAL
+   AJUSTA AQUÍ PARA QUE CALCE
+   =============================== */
+
+.fila-1 {
+  transform: translate(0px, -90px);
+}
+.fila-2 {
+  transform: translate(0px, -60px);
+}
+.fila-3 {
+  transform: translate(0px, -40px);
+}
+.fila-4 {
+  transform: translate(0px, 10px);
+}
+.fila-5 {
+  transform: translate(0px, 50px);
+}
+.fila-6 {
+  transform: translate(0px, 90px);
+}
+.fila-7 {
+  transform: translate(0px, 150px);
+}
+
+/* =======================
+   PITCH (igual a referencia)
+   ======================= */
+
+.pitch {
+  position: relative;
+  width: 100%;
+  /* la proporción de tu diseño (1436x1080 aprox); evita recortes de ondas */
+  aspect-ratio: 1436 / 1080;
+  min-height: 760px; /* si tu contenido es grande, súbelo a 850–950 */
+  overflow: hidden;
+  background: var(--cream); /* si por cualquier cosa hay huecos, se ve crema */
+}
+
+.pitch-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.pitch-bg img {
+  width: 100%;
+  height: auto; /* no estira */
+  object-fit: contain; /* CLAVE: muestra TODA la imagen (sin recortar ondas) */
+  object-position: center; /* centrado */
+  display: block;
+}
+
+.pitch .container {
+  position: relative;
+  z-index: 1;
+  padding: 120px 0; /* el “aire” interno, como tu maqueta */
+}
+
+.white {
+  color: #fcf6ea;
+  margin-top: 8px;
+}
+
+/* si tu fondomitad ya trae ondas, esto no se usa */
+.wave-top-dark,
+.wave-bottom-dark {
+  display: none;
+}
+
+.sub-pitch {
+  font-family: var(--font-b);
+  font-size: 1.5rem;
+  display: block;
+  margin-top: 6px;
+}
+.video-box {
+  width: 700px;
+  height: 400px;
+  margin: 65px auto;
+  background: #000;
+  border: 4px solid #fff;
+  border-radius: 8px;
+}
+.video-box iframe {
+  width: 100%;
+  height: 100%;
+}
+.thumbs-row {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-top: 135px; /* más abajo (antes estaba 20px) */
+}
+
+.thumbs-row img {
+  width: 320px; /* más grandes (antes 180px) */
+  height: 215px; /* proporcional 16:9 (antes 100px) */
+  object-fit: cover;
+  border-radius: 12px;
+}
+/* SOLUCIONES */
+.soluciones {
+  padding: 100px 0;
+}
+.diagram-center {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.diag-title {
+  font-family: var(--font-h);
+  color: var(--teal-dark);
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+.diagram-center img {
+  max-width: 500px;
+}
+.grid-6 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.card {
+  background: #fff;
+  border: 2px solid var(--teal-dark);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  position: relative;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card img {
+  height: 80px;
+  margin-bottom: 15px;
+}
+.card h4 {
+  font-family: var(--font-h);
+  color: var(--teal-dark);
+  margin-bottom: 5px;
+  font-size: 2.1rem;
+}
+.plus {
+  display: block;
+  font-size: 2rem;
+  color: var(--yellow);
+  margin-top: 10px;
+  line-height: 20px;
+}
+
+/* FOOTER */
+/* === Integrantes como referencia (derecha, 2 líneas) === */
+.footer {
+  position: relative; /* ya lo tienes, pero lo aseguramos */
+}
+
+.footer-cont {
+  position: absolute;
+  top: 135px; /* ajusta 20-40px si lo quieres más arriba/abajo */
+  right: 70px; /* ajusta según tu maqueta */
+  padding-top: 0;
+  text-align: right;
+  max-width: 520px; /* controla que se parta en 2 líneas */
+}
+
+/* Título pequeño */
+.footer h3 {
+  font-family: var(--font-b);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 6px 0;
+}
+
+/* Nombres en “2 líneas” con guiones */
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0;
+}
+
+.footer li {
+  display: inline;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--text);
+  margin: 0;
+}
+
+.footer li:not(:last-child)::after {
+  content: " - ";
+}
+
+.mini-paco {
+  width: 60px;
+  margin-top: 30px;
+}
+
+.wave-sep2 {
+  position: relative;
+  display: block;
+  width: 140%;
+  right: 37%;
+  margin: -70px 50px 80px; /* separa del bloque split */
+}
+
+/* LIGHTBOX */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+.lb-imgs {
+  display: flex;
+  gap: 20px;
+}
+.lb-imgs {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1100px;
+}
+
+.lb-imgs img {
+  height: 350px;
+}
+.close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: #fff;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+/* --- ANIMACIONES DE INTERACCIÓN --- */
+
+.img-fade-in {
+  animation: fadeInScale 0.5s ease-out forwards;
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.card {
+  transition:
+    transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-12px);
+  border-color: #4a8c91; /* Cambié var por color fijo por si acaso */
+  box-shadow: 0 15px 30px rgba(11, 121, 142, 0.2);
+}
+
+.card .plus {
+  transition:
+    transform 0.4s ease,
+    color 0.3s ease;
+  display: inline-block;
+}
+
+.card:hover .plus {
+  transform: rotate(90deg) scale(1.4);
+}
+
+.card img {
+  transition: transform 0.5s ease;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+/* --- EFECTO DE APARICIÓN (SCROLL) --- */
+
+/* Esta clase mantiene el elemento invisible inicialmente */
+.scroll-anim {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
+}
+
+/* Esta clase lo activa (la pone el JS) */
+.scroll-anim.active {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* PROTECCIÓN PARA GALERÍA: Evita que el efecto oculte las fotos del lightbox */
+.lb-imgs img {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.paco-hero {
+  /* ... tus estilos actuales ... */
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-15px) rotate(2deg);
+  }
+}
+
+/* Esto hace que los elementos esperen invisibles */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
+}
+
+/* Esto los hace aparecer */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animación interna para las fotos de la galería */
+.img-fade-in {
+  animation: fadeInScale 0.4s ease-out forwards;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* --- NUEVAS INTERACCIONES DE USUARIO --- */
+
+/* 1. Animación de las fotos de investigación (se enderezan y crecen) */
+.research-photo {
+  transition:
+    transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    filter 0.3s ease !important;
+  cursor: zoom-in;
+}
+.research-photo:hover {
+  transform: scale(1.1) rotate(0deg) !important; /* Quita la inclinación al pasar el mouse */
+  z-index: 10;
+  filter: brightness(1.1);
+}
+
+/* 2. Feedback visual en los botones del mapa mental - CORREGIDO */
+.mind-tab {
+  display: inline-block; /* Evita deformaciones de caja */
+  vertical-align: middle;
+  transform: translateZ(0); /* Aceleración de hardware para evitar parpadeos */
+  transition:
+    transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    filter 0.3s ease,
+    box-shadow 0.3s ease !important;
+  backface-visibility: hidden;
+}
+
+.mind-tab:hover {
+  transform: translateY(-5px) scale(1.02); /* Movimiento suave hacia arriba */
+  filter: brightness(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.mind-tab:active {
+  transform: translateY(-2px) scale(0.98); /* Efecto de pulsado */
+}
+
+/* 4. Resplandor sutil en el título principal */
+.title-main {
+  animation: glowTitle 4s ease-in-out infinite;
+}
+@keyframes glowTitle {
+  0%,
+  100% {
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    text-shadow:
+      0 0 20px rgba(255, 255, 255, 0.3),
+      3px 3px 10px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* 5. Mejora de profundidad en las tarjetas de soluciones */
+.card:hover {
+  box-shadow: 0 15px 35px rgba(11, 121, 142, 0.3) !important;
+}
+
+/* Los iconos reaccionan al pasar el mouse */
+.icon-box {
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.icon-box:hover {
+  transform: scale(1.1) rotate(3deg);
+  filter: drop-shadow(0 10px 15px rgba(11, 121, 142, 0.2));
+}
+
+/* Las miniaturas del Pitch se iluminan */
+.thumbs-row img {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  filter: brightness(0.9);
+}
+
+.thumbs-row img:hover {
+  filter: brightness(1.1);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* --- INTERACTIVIDAD FLECHA HERO --- */
+
+.arrow-down {
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: inline-block; /* Necesario para que las transformaciones funcionen */
+}
+
+.arrow-down i {
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.arrow-down:hover {
+  transform: translateY(10px) scale(1.3); /* Baja un poco y crece al acercar el mouse */
+}
+
+.arrow-down:hover i {
+  color: var(--teal-light); /* Cambia al color de tu marca */
+  text-shadow: 0 0 15px rgba(74, 140, 145, 0.6); /* Pequeño resplandor */
+}
+
+/* Efecto de pulsación cuando el usuario hace clic */
+.arrow-down:active {
+  transform: translateY(5px) scale(0.9);
+}
