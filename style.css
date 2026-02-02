@@ -602,10 +602,9 @@ body {
   color: var(--teal-dark);
 }
 
-.card-icon {
-  position: absolute;
-  bottom: 18px;
-  right: 18px;
+.card-icon img {
+  width: 20px;
+  height: 20px;
 }
 
 .plus {
