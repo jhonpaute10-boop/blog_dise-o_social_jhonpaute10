@@ -602,12 +602,11 @@ body {
   color: var(--teal-dark);
 }
 
-.card-icon img {
-  width: 40px;
-  height: 40px;
-  z-index: 2;
+.card-icon {
+  position: absolute;
+  bottom: 18px;
+  right: 18px;
 }
-
 
 .plus {
   display: block;
