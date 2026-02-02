@@ -581,7 +581,7 @@ body {
 
 .card h4 {
   font-family: var(--font-h);
-  color: var(--teal-dark);
+  color: var(--blue-dark);
   font-size: 2.1rem;
   margin-bottom: 5px;
 }
