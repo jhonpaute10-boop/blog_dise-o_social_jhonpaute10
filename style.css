@@ -587,9 +587,24 @@ body {
 }
 
 .card p {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  font-family: var(--font-p);
+  font-weight: 400;
   color: #555;
-  line-height: 1.4;
+  line-height: 1.5;
+}
+
+.card-icon {
+  position: absolute;
+  bottom: 18px;
+  right: 18px;
+  font-size: 1.8rem;
+  color: var(--teal-dark);
+}
+
+.card-icon img {
+  width: 28px;
+  height: 28px;
 }
 
 .plus {
