@@ -3,6 +3,7 @@
   font-family: "Ciguatera";
   src: url("assets/fonts/ciguatera.otf");
 }
+
 @font-face {
   font-family: "Roboto";
   src: url("assets/fonts/Roboto-Regular.ttf");
@@ -10,7 +11,8 @@
 
 :root {
   --cream: #fcf6ea;
-  --teal-dark: #0b798e; /* El color oscuro de los titulos */
+  --teal-dark: #0b798e;
+  /* El color oscuro de los titulos */
   --teal-light: #4a8c91;
   --yellow: #1c8146;
   --text: #203b44;
@@ -23,12 +25,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   background: var(--cream);
   font-family: var(--font-b);
   color: var(--text);
   overflow-x: hidden;
 }
+
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -42,6 +46,7 @@ body {
   left: 100px;
   z-index: 100;
 }
+
 .uni-text {
   font-family: var(--font-h);
   color: #203b44;
@@ -63,6 +68,7 @@ body {
   align-items: center;
   text-align: center;
 }
+
 .hero-bg img {
   position: absolute;
   top: 0;
@@ -72,10 +78,12 @@ body {
   object-fit: cover;
   z-index: -2;
 }
+
 .hero-content {
   z-index: 2;
   margin-top: -50px;
 }
+
 .title-main {
   font-family: var(--font-h);
   font-size: 7rem;
@@ -84,6 +92,7 @@ body {
   line-height: 0.9;
   font-weight: normal;
 }
+
 .title-sub {
   font-size: 2rem;
   color: #fff;
@@ -91,12 +100,14 @@ body {
   margin-top: 10px;
   font-weight: normal;
 }
+
 .arrow-down {
   font-size: 1.5rem;
   color: #fff;
   margin-top: 70px;
   animation: bounce 2s infinite;
 }
+
 .paco-hero {
   position: absolute;
   bottom: 40px;
@@ -104,6 +115,7 @@ body {
   width: 320px;
   z-index: 5;
 }
+
 .wave-bottom {
   position: absolute;
   bottom: -20px;
@@ -115,13 +127,18 @@ body {
   padding: 20px 0;
   position: relative;
 }
+
 /* El contenedor principal que divide izquierda/derecha */
 .split {
   display: flex;
-  align-items: center; /* Centra verticalmente texto e imagen */
-  justify-content: space-between; /* Separa los elementos */
-  gap: 60px; /* Espacio entre el texto y la imagen */
+  align-items: center;
+  /* Centra verticalmente texto e imagen */
+  justify-content: space-between;
+  /* Separa los elementos */
+  gap: 60px;
+  /* Espacio entre el texto y la imagen */
 }
+
 .sec-title {
   font-family: var(--font-h);
   font-weight: normal;
@@ -130,34 +147,41 @@ body {
   line-height: 1;
   margin-bottom: 20px;
 }
+
 .txt-col p {
   margin-bottom: 15px;
   text-align: justify;
   font-size: 1.1rem;
 }
+
 .img-col img {
   width: 166%;
   max-width: auto;
 }
+
 .onda-hero {
   position: absolute;
   top: 30px;
   left: -3px;
   width: 72px;
 }
+
 /* Los 3 iconos abajo */
 .icons-3-row {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 120px; /* Más espacio entre iconos */
+  gap: 120px;
+  /* Más espacio entre iconos */
   margin-top: 30px;
-  flex-wrap: wrap; /* Para que no se rompa en pantallas pequeñas */
+  flex-wrap: wrap;
+  /* Para que no se rompa en pantallas pequeñas */
 }
 
 .icon-box {
   text-align: center;
-  width: 250px; /* Asegura que cada icono tenga su espacio */
+  width: 250px;
+  /* Asegura que cada icono tenga su espacio */
 }
 
 .icon-box img {
@@ -171,16 +195,19 @@ body {
   display: block;
   width: 140%;
   right: 37%;
-  margin: -10px 0 0; /* separa del bloque split */
+  margin: -10px 0 0;
+  /* separa del bloque split */
 }
 
 /* INVESTIGACION */
 .investigacion {
   padding: 60px 0 80px;
 }
+
 .center {
   text-align: center;
 }
+
 .timeline {
   display: flex;
   justify-content: space-between;
@@ -230,26 +257,36 @@ body {
 }
 
 .research-photo {
-  width: 240px; /* o el tamaño que te guste */
-  height: auto; /* clave: no recorta */
-  object-fit: contain; /* clave: no recorta */
-  border: none; /* quita marco extra */
-  box-shadow: none; /* quita sombra extra */
-  border-radius: 0; /* evita doble esquina redondeada */
+  width: 240px;
+  /* o el tamaño que te guste */
+  height: auto;
+  /* clave: no recorta */
+  object-fit: contain;
+  /* clave: no recorta */
+  border: none;
+  /* quita marco extra */
+  box-shadow: none;
+  /* quita sombra extra */
+  border-radius: 0;
+  /* evita doble esquina redondeada */
   background: transparent;
-  transform: none; /* importante si tus imágenes YA vienen inclinadas */
+  transform: none;
+  /* importante si tus imágenes YA vienen inclinadas */
 }
 
 /* “desorden” tipo mockup (rotación leve) */
 .research-photo:nth-child(1) {
   transform: rotate(-6deg);
 }
+
 .research-photo:nth-child(2) {
   transform: rotate(4deg);
 }
+
 .research-photo:nth-child(3) {
   transform: rotate(-4deg);
 }
+
 .research-photo:nth-child(4) {
   transform: rotate(9deg);
 }
@@ -299,11 +336,14 @@ body {
    =============================== */
 
 .fondoorganico {
-  position: relative; /* referencia */
+  position: relative;
+  /* referencia */
   width: 100%;
-  padding: 140px 0; /* aire arriba y abajo */
+  padding: 140px 0;
+  /* aire arriba y abajo */
   overflow: hidden;
-  background: #fcf6ea; /* color respaldo */
+  background: #fcf6ea;
+  /* color respaldo */
   margin-bottom: 50px;
 }
 
@@ -343,7 +383,8 @@ body {
 
 /* COLUMNAS */
 .mm-left {
-  max-width: 200px; /* 👈 AJUSTA este valor */
+  max-width: 200px;
+  /* 👈 AJUSTA este valor */
   color: #ffffff;
   margin: 0 auto;
   text-align: center;
@@ -374,21 +415,27 @@ body {
 .fila-1 {
   transform: translate(0px, -90px);
 }
+
 .fila-2 {
   transform: translate(0px, -60px);
 }
+
 .fila-3 {
   transform: translate(0px, -40px);
 }
+
 .fila-4 {
   transform: translate(0px, 10px);
 }
+
 .fila-5 {
   transform: translate(0px, 50px);
 }
+
 .fila-6 {
   transform: translate(0px, 90px);
 }
+
 .fila-7 {
   transform: translate(0px, 150px);
 }
@@ -402,9 +449,11 @@ body {
   width: 100%;
   /* la proporción de tu diseño (1436x1080 aprox); evita recortes de ondas */
   aspect-ratio: 1436 / 1080;
-  min-height: 760px; /* si tu contenido es grande, súbelo a 850–950 */
+  min-height: 760px;
+  /* si tu contenido es grande, súbelo a 850–950 */
   overflow: hidden;
-  background: var(--cream); /* si por cualquier cosa hay huecos, se ve crema */
+  background: var(--cream);
+  /* si por cualquier cosa hay huecos, se ve crema */
 }
 
 .pitch-bg {
@@ -415,16 +464,20 @@ body {
 
 .pitch-bg img {
   width: 100%;
-  height: auto; /* no estira */
-  object-fit: contain; /* CLAVE: muestra TODA la imagen (sin recortar ondas) */
-  object-position: center; /* centrado */
+  height: auto;
+  /* no estira */
+  object-fit: contain;
+  /* CLAVE: muestra TODA la imagen (sin recortar ondas) */
+  object-position: center;
+  /* centrado */
   display: block;
 }
 
 .pitch .container {
   position: relative;
   z-index: 1;
-  padding: 120px 0; /* el “aire” interno, como tu maqueta */
+  padding: 120px 0;
+  /* el “aire” interno, como tu maqueta */
 }
 
 .white {
@@ -444,6 +497,7 @@ body {
   display: block;
   margin-top: 6px;
 }
+
 .video-box {
   width: 700px;
   height: 400px;
@@ -452,68 +506,92 @@ body {
   border: 4px solid #fff;
   border-radius: 8px;
 }
+
 .video-box iframe {
   width: 100%;
   height: 100%;
 }
+
 .thumbs-row {
   display: flex;
   justify-content: center;
   gap: 28px;
-  margin-top: 135px; /* más abajo (antes estaba 20px) */
+  margin-top: 135px;
+  /* más abajo (antes estaba 20px) */
 }
 
 .thumbs-row img {
-  width: 320px; /* más grandes (antes 180px) */
-  height: 215px; /* proporcional 16:9 (antes 100px) */
+  width: 320px;
+  /* más grandes (antes 180px) */
+  height: 215px;
+  /* proporcional 16:9 (antes 100px) */
   object-fit: cover;
   border-radius: 12px;
 }
+
 /* SOLUCIONES */
 .soluciones {
   padding: 100px 0;
 }
+
 .diagram-center {
   text-align: center;
   margin-bottom: 50px;
 }
+
 .diag-title {
   font-family: var(--font-h);
   color: var(--teal-dark);
   font-size: 1.5rem;
   margin-bottom: 20px;
 }
+
 .diagram-center img {
   max-width: 500px;
 }
+
 .grid-6 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
+
 .card {
   background: #fff;
-  border: 2px solid var(--teal-dark);
-  border-radius: 15px;
-  padding: 20px;
-  text-align: center;
+  border: 1.5px solid var(--teal-dark);
+  border-radius: 28px;
+  padding: 18px;
+  text-align: left;
   cursor: pointer;
-  transition: transform 0.2s;
+  transition: transform 0.25s ease;
   position: relative;
 }
+
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
 }
+
 .card img {
-  height: 80px;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 18px;
   margin-bottom: 15px;
 }
+
 .card h4 {
   font-family: var(--font-h);
   color: var(--teal-dark);
-  margin-bottom: 5px;
-  font-size: 2.1rem;
+  font-size: 1.2rem;
+  margin-bottom: 6px;
 }
+
+.card p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+}
+
 .plus {
   display: block;
   font-size: 2rem;
@@ -525,16 +603,20 @@ body {
 /* FOOTER */
 /* === Integrantes como referencia (derecha, 2 líneas) === */
 .footer {
-  position: relative; /* ya lo tienes, pero lo aseguramos */
+  position: relative;
+  /* ya lo tienes, pero lo aseguramos */
 }
 
 .footer-cont {
   position: absolute;
-  top: 135px; /* ajusta 20-40px si lo quieres más arriba/abajo */
-  right: 70px; /* ajusta según tu maqueta */
+  top: 135px;
+  /* ajusta 20-40px si lo quieres más arriba/abajo */
+  right: 70px;
+  /* ajusta según tu maqueta */
   padding-top: 0;
   text-align: right;
-  max-width: 520px; /* controla que se parta en 2 líneas */
+  max-width: 520px;
+  /* controla que se parta en 2 líneas */
 }
 
 /* Título pequeño */
@@ -579,7 +661,8 @@ body {
   display: block;
   width: 140%;
   right: 37%;
-  margin: -70px 50px 80px; /* separa del bloque split */
+  margin: -70px 50px 80px;
+  /* separa del bloque split */
 }
 
 /* LIGHTBOX */
@@ -595,10 +678,12 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .lb-imgs {
   display: flex;
   gap: 20px;
 }
+
 .lb-imgs {
   display: flex;
   gap: 20px;
@@ -611,6 +696,7 @@ body {
 .lb-imgs img {
   height: 350px;
 }
+
 .close {
   position: absolute;
   top: 20px;
@@ -631,6 +717,7 @@ body {
     opacity: 0;
     transform: scale(0.9);
   }
+
   100% {
     opacity: 1;
     transform: scale(1);
@@ -646,7 +733,8 @@ body {
 
 .card:hover {
   transform: translateY(-12px);
-  border-color: #4a8c91; /* Cambié var por color fijo por si acaso */
+  border-color: #4a8c91;
+  /* Cambié var por color fijo por si acaso */
   box-shadow: 0 15px 30px rgba(11, 121, 142, 0.2);
 }
 
@@ -698,10 +786,12 @@ body {
 }
 
 @keyframes float {
+
   0%,
   100% {
     transform: translateY(0) rotate(0);
   }
+
   50% {
     transform: translateY(-15px) rotate(2deg);
   }
@@ -732,6 +822,7 @@ body {
     opacity: 0;
     transform: scale(0.95);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -747,17 +838,21 @@ body {
     filter 0.3s ease !important;
   cursor: zoom-in;
 }
+
 .research-photo:hover {
-  transform: scale(1.1) rotate(0deg) !important; /* Quita la inclinación al pasar el mouse */
+  transform: scale(1.1) rotate(0deg) !important;
+  /* Quita la inclinación al pasar el mouse */
   z-index: 10;
   filter: brightness(1.1);
 }
 
 /* 2. Feedback visual en los botones del mapa mental - CORREGIDO */
 .mind-tab {
-  display: inline-block; /* Evita deformaciones de caja */
+  display: inline-block;
+  /* Evita deformaciones de caja */
   vertical-align: middle;
-  transform: translateZ(0); /* Aceleración de hardware para evitar parpadeos */
+  transform: translateZ(0);
+  /* Aceleración de hardware para evitar parpadeos */
   transition:
     transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
     filter 0.3s ease,
@@ -766,24 +861,29 @@ body {
 }
 
 .mind-tab:hover {
-  transform: translateY(-5px) scale(1.02); /* Movimiento suave hacia arriba */
+  transform: translateY(-5px) scale(1.02);
+  /* Movimiento suave hacia arriba */
   filter: brightness(1.1);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .mind-tab:active {
-  transform: translateY(-2px) scale(0.98); /* Efecto de pulsado */
+  transform: translateY(-2px) scale(0.98);
+  /* Efecto de pulsado */
 }
 
 /* 4. Resplandor sutil en el título principal */
 .title-main {
   animation: glowTitle 4s ease-in-out infinite;
 }
+
 @keyframes glowTitle {
+
   0%,
   100% {
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
   }
+
   50% {
     text-shadow:
       0 0 20px rgba(255, 255, 255, 0.3),
@@ -824,7 +924,8 @@ body {
 .arrow-down {
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  display: inline-block; /* Necesario para que las transformaciones funcionen */
+  display: inline-block;
+  /* Necesario para que las transformaciones funcionen */
 }
 
 .arrow-down i {
@@ -834,12 +935,15 @@ body {
 }
 
 .arrow-down:hover {
-  transform: translateY(10px) scale(1.3); /* Baja un poco y crece al acercar el mouse */
+  transform: translateY(10px) scale(1.3);
+  /* Baja un poco y crece al acercar el mouse */
 }
 
 .arrow-down:hover i {
-  color: var(--teal-light); /* Cambia al color de tu marca */
-  text-shadow: 0 0 15px rgba(74, 140, 145, 0.6); /* Pequeño resplandor */
+  color: var(--teal-light);
+  /* Cambia al color de tu marca */
+  text-shadow: 0 0 15px rgba(74, 140, 145, 0.6);
+  /* Pequeño resplandor */
 }
 
 /* Efecto de pulsación cuando el usuario hace clic */
