@@ -557,15 +557,21 @@ body {
 }
 
 .card {
-  background: #fff;
+  background: #f7f8f3;
   border: 1.5px solid var(--teal-dark);
   border-radius: 28px;
-  padding: 18px;
+  padding: 10px;
   text-align: left;
   cursor: pointer;
   transition: transform 0.25s ease;
-  position: relative;
+
+  display: flex;
+  /* 👈 CLAVE */
+  flex-direction: column;
+  /* 👈 CLAVE */
 }
+
+
 
 .card:hover {
   transform: translateY(-6px);
@@ -581,9 +587,11 @@ body {
 
 .card h4 {
   font-family: var(--font-h);
+  font-weight: 400;
   color: var(--blue-dark);
-  font-size: 1.4rem;
-  margin-bottom: 5px;
+  font-size: 2rem;
+  padding: 0 12px;
+  margin-bottom: 10px;
 }
 
 .card p {
@@ -592,28 +600,27 @@ body {
   font-weight: 400;
   color: #555;
   line-height: 1.5;
+  padding: 0 12px;
 }
 
 .card-icon {
-  position: absolute;
-  bottom: 18px;
-  right: 18px;
-  font-size: 1.8rem;
-  color: var(--teal-dark);
+  margin-top: auto;
+  /* 👈 CLAVE */
+  width: auto;
+  display: flex;
+  justify-content: flex-end;
 }
+
+
+
 
 .card-icon img {
-  width: 20px;
-  height: 20px;
+  width: 70px;
+  height: auto;
+  padding: 12px;
 }
 
-.plus {
-  display: block;
-  font-size: 2rem;
-  color: var(--yellow);
-  margin-top: 10px;
-  line-height: 20px;
-}
+
 
 /* FOOTER */
 /* === Integrantes como referencia (derecha, 2 líneas) === */
