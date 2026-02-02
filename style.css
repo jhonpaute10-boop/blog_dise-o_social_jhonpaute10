@@ -603,9 +603,11 @@ body {
 }
 
 .card-icon img {
-  width: 28px;
-  height: 28px;
+  width: 40px;
+  height: 40px;
+  display: block;
 }
+
 
 .plus {
   display: block;
